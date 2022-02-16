@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./fontFamily/stylesheet.css" type="text/css" charset="utf-8" />
+
+
+  <title>Demo</title>
+</head>
+
+<body class="background-about">
+
+  <nav class="nav">
+    <a href="#" class="logo">
+      <img src="./img/logo.png" alt="Mio Website" class="logo">
+    </a>
+    <div class="nav-collapse">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="#" class="nav-logo">
+          <img src="./img/logo.png" alt="Mio Website">
+        </a>
+        <button class="toggler close" id="closeToggler">
+          <i class="ic-close"></i>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="#about" onclick="handleNavigation()">About</a></li>
+        <li><a href="#menu" onclick="handleNavigation()">Menu</a></li>
+        <li><a href="#order" onclick="handleNavigation()">Order</a></li>
+      </ul>
+    </div>
+
+    <button id="openToggler" class="toggler btn"><i class="ic-menu"></i></button>
+  </nav>
+  <img src="./img/sign.png" alt="" class="sign">
+
+  <main>
+    <section class="section" id="about" data-color="about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 d-flex offset-md-1 offset-lg-3">
+            <div class="composition composition-xl">
+              <div class="textbox order-2 about-textbox">
+                <h6>[ ASSORTED SUSHI BALLS ]</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+              </div>
+              <div class="composition-img order-1  mb-3 about-image">
+                <img src="./img/uu-01.png" alt="About Image">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 offset-md-1 offset-lg-0 about-description">
+            <p class="description mt-3 mt-md-0">We have perfected the Art of Sushi so that you can enjoy
+              them in the
+              comfort of your own home.
+            </p>
+            <p class="description mt-3">Mio Fine Foods is the latest Japanese concept that brings
+              traditional, yet
+              artisanal fine Japanese cuisine
+              right to your doorstep. Using only the freshest and high-quality ingredients of each season, you will be
+              assured of savouring the very best.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about2" data-color="about2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2 d-flex offset-md-2 offset-lg-5 offset-xl-6">
+                <div class="composition composition-lg">
+                  <div class="textbox order-2  mb-sm-3 mb-md-0 about2-text">
+                    <h6>[ BUTTER SAKE MENTAKO ROLL ]</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div class="composition-img order-1 about2-img mb-3">
+                    <img src="./img/about2.png" alt="About Image">
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-6 col-md-3  offset-lg-1 about2-description">
+                <p class="description mt-3 mt-sm-0">We have perfected the Art of Sushi so that you can
+                  enjoy them in the
+                  comfort of your own home.
+                </p>
+                <p class="description mt-3 mb-4">Mio Fine Foods is the latest Japanese concept that brings
+                  traditional,
+                  yet artisanal fine Japanese cuisine
+                  right to your doorstep. Using only the freshest and high-quality ingredients of each season, you will
+                  be
+                  assured of savouring the very best.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-12">
+            <div class="row" id="about2Left">
+              <div class="col-md-6 col-lg-4 col-xl-3 d-flex offset-md-4 offset-lg-1">
+                <div class="composition composition-lg">
+                  <div class="textbox order-2 ">
+                    <h6>[ NORI TACOS ]</h6>
+                    <p>ASSORTED SASHIMI, SOFT SHELL CRAB, BEEF CUBES, NEGITORO UNI</p>
+                  </div>
+                  <div class="composition-img order-1 leftImage mb-3">
+                    <img src="./img/about-left.png" alt="About Image">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-12">
+            <div class="row" id="about2Bottom">
+              <div class="col-md-6 col-lg-4 col-xl-3 d-flex offset-md-2 offset-lg-6 mt-4 mt-sm-0 mt-md-4">
+                <div class="composition composition-lg">
+                  <div class="textbox order-2 ">
+                    <h6>[ NORI TACOS ]</h6>
+                    <p>ASSORTED SASHIMI, SOFT SHELL CRAB, BEEF CUBES, NEGITORO UNI</p>
+                  </div>
+                  <div class="composition-img order-1 mb-3">
+                    <img src="./img/bread-01.png" alt="About Image" style="object-position: center;">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+    <section class="section position-relative" id="menu" data-color="menu">
+      <div class="menu-carousel">
+        <div class="js-conveyor-1">
+          <ul>
+            <li>
+              <h1 class="tickerItem" data-image="bread-01.png">&nbsp;Sushi / </h1>
+            </li>
+            <li>
+              <h1 class="tickerItem" data-image="bread-01.png">&nbsp;Sando / </h1>
+            </li>
+            <li>
+              <h1 class="tickerItem" data-image="bread-01.png">&nbsp;Sashimi / </h1>
+            </li>
+            <li>
+              <h1 class="tickerItem" data-image="menu-02.png">&nbsp;platters /</h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+     
+      
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 d-flex offset-md-1 offset-lg-3 justify-content-center">
+            <div class="menu-img">
+              <img src="./img/menu-02.png" id="menuImage" alt="" class="mx-auto">
+            </div>
+
+          </div>
+          <div class="col-md-3 offset-md-1 offset-lg-0">
+            <p class="description mt-3 mt-md-0">We believe freshness is of the essence. With a close relationship with
+              our trusted partners, our ingredients are air-flown into Singapore every week.
+            </p>
+            <p class="description mt-3">For a full selection of our inaugural menu, click <a href="">here</a></p>
+          </div>
+        </div>
+        <div class="container-fluid text-end pt-4">
+          <a href="#" class="link1">
+            <div class="dot1">
+            </div>
+
+            <span>Download menu</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <section class="section" id="order" data-color="order">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 d-flex offset-md-1 offset-lg-3">
+            <div class="composition composition-xl">
+              <div class="textbox order-2 ">
+                <h6>&copy; 2022 MI O FINE FOODS</h6>
+
+
+              </div>
+              <div class="composition-img order-1 mb-3">
+                <img src="./img/order.png" alt="About Image">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 offset-md-1 offset-lg-1">
+            <p class="description mt-3 mt-md-0">We may all be staying at home right not, but that doesn't mean we can't
+              come to you. We bring you fresh and flavourful cuisine straight from our kitchen to your door, hassle free
+            </p>
+            <p class="description mt-3 description1">For any enquiries or orders please whatsapp us directly at <a
+                href="tel:6598552733"> +65 9855 2733</a> or you can find out more <a href="#">&copy;miofinefoods.</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <footer class="footer">
+              <ul class="footer-list">
+                <li><a href="">INSTAGRAM</a></li>
+                <li><span>TEL:</span><a href=""> +65 9855 2733</a></li>
+                <li><span>EMAIL:</span><a href=""> INFO@MIOFINEFOODS.COM</a></li>
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+
+  <script>
+    function handleNavigation(){
+      if($('.nav-collapse').hasClass('toggled')){
+        $('.nav-collapse').removeClass('toggled')
+    }
+    }
+  </script>
+
+</body>
+
+</html>

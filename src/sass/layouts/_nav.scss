@@ -1,0 +1,98 @@
+.nav {
+  @include media-breakpoint-up(md) {
+    z-index: 1;
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+  }
+  @include media-breakpoint-down(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+  }
+
+  &-list {
+    margin-left: -0.75rem;
+    @include list-unstyled;
+    display: flex;
+    li {
+      &:not(:last-child) {
+        margin-right: 3.25rem;
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    a {
+      display: block;
+      text-transform: uppercase;
+      color: $blue;
+      padding: 0.5rem 0.75rem;
+      @include rfs(18px);
+      font-family: "Cstle";
+      @include media-breakpoint-down(md) {
+        @include rfs(24px);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 3rem;
+    }
+  }
+  &-collapse {
+    transition: all 0.2s ease-in-out;
+    @include media-breakpoint-down(md) {
+      background-color: #dee4f4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      padding: 1rem 2rem;
+      transform: translateY(-100%);
+    }
+
+    &.toggled {
+      @include media-breakpoint-down(md) {
+        transform: translateY(0);
+      }
+    }
+  }
+  &-logo {
+    display: none;
+    img {
+      height: 3rem;
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+}
+
+.toggler {
+  border: 0;
+  outline: none;
+  color: $blue;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: none;
+  background-color: unset;
+  @include rfs(24px);
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+
+  &.close {
+    color: $blue;
+  }
+}

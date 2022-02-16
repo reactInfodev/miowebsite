@@ -1,0 +1,107 @@
+.composition {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  &-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include media-breakpoint-up(md) {
+      margin-left: 1.5rem;
+    }
+  }
+
+
+  .textbox {
+    color: $blue;
+    font-family: "RadiantRR";
+
+    h6,
+    p {
+      @include rfs(14px);
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 17rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: rotate(90deg);
+      transform-origin: 0 0;
+    }
+  }
+
+  &-xl {
+    height: auto;
+
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      height: 28.125rem;
+      margin-top: 6.25rem;
+    }
+  }
+  &-lg {
+    width: 100%;
+    height: auto;
+    @include media-breakpoint-up(md) {
+      height: 15.375rem;
+    }
+    .textbox{
+        @include media-breakpoint-up(md) {
+            max-width: 14.5rem;
+          }   
+    }
+    .composition-img{
+        @include media-breakpoint-down(md) {
+            height: 10rem;
+          } 
+          @include media-breakpoint-down(sm) {
+            height: 16rem;
+          }   
+    }
+    
+  }
+}
+
+.logo {
+  img{
+    height: 3rem;
+    @include media-breakpoint-up(md){
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    position: fixed;
+    bottom: 2.5rem;
+    left: 2rem;
+    z-index: 1;
+    height: auto;
+
+  }
+
+  
+}
+
+
+.sign{
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  z-index: 10;
+}
+
+
+
+
+

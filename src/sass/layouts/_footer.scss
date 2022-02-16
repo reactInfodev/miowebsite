@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 6.25rem;
+  @include media-breakpoint-down(md){
+    padding-top: 2.25rem;
+    justify-content: center;
+  
+
+}
+  @include media-breakpoint-down(sm){
+    
+  justify-content: flex-start;
+
+}
+  &-list {
+    @include list-unstyled;
+    display: flex;
+    li {
+      display: flex;
+      @include media-breakpoint-down(sm){
+        margin-top: .5rem;
+      }
+      &:not(:last-child) {
+        margin-right: 3.75rem;
+        @include media-breakpoint-down(sm){
+            margin-right: 1.75rem;
+
+        }
+      }
+    }
+    a,
+    span {
+      text-transform: uppercase;
+      color: $blue;
+      @include rfs(13px);
+      font-family: "Cstle";
+    }
+    a {
+      margin-left: 0.125rem;
+      display: inline-block;
+      text-decoration: underline;
+
+      text-decoration-color: $blue;
+    }
+    @include media-breakpoint-down(sm){
+      flex-wrap: wrap;
+      margin-top: -.5rem;
+    }
+  }
+}

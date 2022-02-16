@@ -1,0 +1,51 @@
+
+body{
+    max-width: 1920px;
+    margin: auto;
+    transition: background-color 1s ease;
+}
+//root variables
+
+:root{
+  
+  }
+
+
+
+
+
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    outline: 0;
+
+    color: inherit;
+    
+    &:hover{
+        text-decoration: none;
+       
+    }
+    &:focus{
+
+    text-decoration: none;
+    outline: 0;
+  
+    }   
+}
+
+
+
+.container-fluid{
+    
+    @include media-breakpoint-up(xl){
+        padding: 0 2rem;
+    }
+    @include media-breakpoint-down(sm){
+        padding: 0 1.5rem; 
+    }
+}
+
+

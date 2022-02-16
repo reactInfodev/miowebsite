@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'LChlmsford';
+    src: url('LChlmsford.woff2') format('woff2'),
+        url('LChlmsford.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cstle';
+    src: url('Cstle.woff2') format('woff2'),
+        url('Cstle.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RadiantRR';
+    src: url('RadiantRR-Medium.woff2') format('woff2'),
+        url('RadiantRR-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

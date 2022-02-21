@@ -1,12 +1,7 @@
 
-import marquee from './vanilla-marquee'
 import "../sass/main.scss";
 import './ticker'
-console.log('hello')
 
-//https://codepen.io/unetic/pen/QrbbWR
-// /https://css-tricks.com/reverse-text-color-mix-blend-mode/
-//https://www.cssscript.com/demo/smooth-marquee-like-scroller-pure-javascript-marquee3000/
 $(window).on('scroll', function () {
     const $windows = $(window)
     const $body = $('body')
@@ -30,26 +25,7 @@ $(window).on('scroll', function () {
 
 $('.js-conveyor-1').jConveyorTicker();
 
-// const myScroller = new marquee(document.querySelector(".menu-carousel"), {
-//     // CSS easing
-//     css3easing: 'linear',
-//     // time to wait before starting the animation
-//     delayBeforeStart: 0,
-//     // dulicate the content to create a continuous flow
-//     duplicated: false,
-//     // duration of animation
-//     duration: 5000,
-//     // space between tickers
-//     gap: 20,
-//     // pause on hover
-//     pauseOnHover: true,
-//     // re-calculate on window resize
-//     recalcResize: false,
-//     // animation speed
-//     speed: 0,
-//     // if is visibile from thestart
-//     startVisible: true,
-// })
+
 
 document.querySelectorAll('.tickerItem').forEach(item=>{
     item.addEventListener('mouseover',function(){
@@ -82,8 +58,12 @@ const aboutSection = document.getElementById('about')
 const about2Section = document.getElementById('about2')
 const about2LeftSection = document.getElementById('about2Left')
 const about2BottomSection = document.getElementById('about2Bottom')
-const menuSection = document.getElementById('menu')
+const cateringTopSection = document.getElementById('cateringTop')
+const cateringBottomSection = document.getElementById('cateringBottom')
+const cateringCenterSection = document.getElementById('cateringCenter')
+
 const orderSection = document.getElementById('order')
+const cateringSection = document.getElementById('catering')
 
 
 
@@ -281,8 +261,99 @@ if (orderSection) {
     
 }
 
-function handleNavigation(){
-    alert()
-    return true
+if(cateringTopSection){
+    const cateringTopSectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio > 0 ) {    
+            cateringTopSectionAnimation()
+            cateringTopSectionObserver.unobserve(entries[0].target)
+        }
+    },{threshold:0})
+    cateringTopSectionObserver.observe(cateringTopSection)
+    function cateringTopSectionAnimation() {
+        anime
+            .timeline({
+                easing: 'cubicBezier(0.4, 0, 0.2, 1)',
+            })
+            .add({
+                targets:['#cateringTop'],
+                opacity:1,
+            },"-=1000").add({
+                targets:[' #cateringTop .imgbox'],
+                opacity:1,
+                duration:1000,
+                translateY:['100',0]
+            },"-=100")
+
+        anime
+        .timeline({
+            easing: 'cubicBezier(0.4, 0, 0.2, 1)',
+            duration: 2000,
+        })
+        .add({
+            targets:['#catering'],
+            opacity:1,
+        },"-=2000")
+        .add({
+            targets: ['#catering .description' ,'#catering .description1'],
+            translateY: [25, 0],
+            opacity: [0, 1],
+            delay: (el, i) => 500 * i,
+        })
+
+            
+    }
 }
-export {handleNavigation}
+if(cateringBottomSection){
+    const cateringBottomSectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio > 0 ) {    
+            cateringBottomSectionAnimation()
+            cateringBottomSectionObserver.unobserve(entries[0].target)
+        }
+    },{threshold:1})
+    cateringBottomSectionObserver.observe(cateringBottomSection)
+    function cateringBottomSectionAnimation() {
+        anime
+            .timeline({
+                easing: 'cubicBezier(0.4, 0, 0.2, 1)',
+            })
+            .add({
+                targets:['#cateringBottom'],
+                opacity:1,
+            },"-=1000").add({
+                targets:[' #cateringBottom .imgbox'],
+                opacity:1,
+                duration:1400,
+                translateY:['100',0]
+            },"-=100")
+
+            
+    }
+}
+if(cateringCenterSection){
+    const cateringCenterSectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio > 0 ) {    
+            cateringCenterSectionAnimation()
+            cateringCenterSectionObserver.unobserve(entries[0].target)
+        }
+    },{threshold:1})
+    cateringCenterSectionObserver.observe(cateringCenterSection)
+    function cateringCenterSectionAnimation() {
+        anime
+            .timeline({
+                easing: 'cubicBezier(0.4, 0, 0.2, 1)',
+            })
+            .add({
+                targets:['#cateringCenter'],
+                opacity:1,
+            },"-=1000").add({
+                targets:['#cateringCenter .imgbox'],
+                opacity:1,
+                duration:1200,
+                translateY:['100',0]
+            },"-=100")
+
+            
+    }
+}
+
+
